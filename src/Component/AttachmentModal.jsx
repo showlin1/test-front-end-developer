@@ -1,83 +1,80 @@
-import { useContext, useState } from "react";
-import { RxCross2 } from "react-icons/rx";
-import Swal from "sweetalert2";
-import toast from "react-hot-toast";
-
-
-const AttachmentModal = ({ handleAttachment, assignment }) => {
-    // const { _id, title, difficulty, marks, dueDate, email, othersUser } = assignment;
-
-    const handleAttachment = async e => {
-        e.preventDefault()
-        const form = e.target;
-        const email = email;
-        const attachmentId=_id;
-        const pdfLink = form.pdfLink.value;
-
-        const myAssignmentData = {
-            attachmentId,
-            email,
-            pdfLink,
-        }
-
-        try {
-            const { data } = await axios.post(
-                `${import.meta.env.VITE_API_URL}/myAssignments`,
-                myAssignmentData
-            )
-            console.log(data)
-            if (data.insertedId) {
-                Swal.fire({
-                    title: 'Success',
-                    text: 'My Assignment Post Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-                })
-            }
-            navigate('/mySubmitAssignments')
-        } catch (err) {
-            // console.log(err)
-            toast.success(err.response.data);
-            e.target.reset()
-        }
-    }
-
+import PropTypes from 'prop-types'
+import { Fragment } from 'react'
+import {
+    Dialog,
+    Transition,
+    TransitionChild,
+    DialogTitle,
+    DialogPanel,
+} from '@headlessui/react';
+import AttachmentForm from './AttachmentForm/AttachmentForm';
+const AttachmentModal = ({ isOpenA, closeModal }) => {
     return (
-            <div className="fixed inset-0 pt-12 md:pt-20 px-3 z-10 w-full bg-gray-500 bg-opacity-45">
-                <form onSubmit={handleTakingAssignment} className="max-w-xl mx-auto shadow-2xl border rounded-lg bg-gray-50 dark:bg-gray-800 p-3 md:p-8 relative space-y-1 md:space-y-5">
-                    <div>
-                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">PDF/doc link</label>
-                        <input type="text" name="pdfLink" placeholder="PDF/doc link" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-                    <div>
-                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Quick note text</label>
-                        <textarea name="noteText" required className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" ></textarea>
-                    </div>
+        <Transition appear show={isOpenA} as={Fragment}>
+            <Dialog
+                as='div'
+                className='relative z-10'
+                onClose={() => closeModal(false)}
+            >
+                <TransitionChild
+                    as={Fragment}
+                    enter='ease-out duration-300'
+                    enterFrom='opacity-0'
+                    enterTo='opacity-100'
+                    leave='ease-in duration-200'
+                    leaveFrom='opacity-100'
+                    leaveTo='opacity-0'
+                >
+                    <div className='fixed inset-0 bg-black bg-opacity-25' />
+                </TransitionChild>
 
-                    <div className="-mx-2 md:items-center md:flex">
-                        <div className="flex-1 px-2">
-                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                            <input type="email" defaultValue={user?.email} readOnly className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        </div>
-
-                        <div className="flex-1 px-2">
-                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Post assignment Date</label>
-                            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} name="date" className="block w-full px-5 py-2.5 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        </div>
+                <div className='fixed inset-0 overflow-y-auto'>
+                    <div className='flex min-h-full items-center justify-center p-4 text-center'>
+                        <TransitionChild
+                            as={Fragment}
+                            enter='ease-out duration-300'
+                            enterFrom='opacity-0 scale-95'
+                            enterTo='opacity-100 scale-100'
+                            leave='ease-in duration-200'
+                            leaveFrom='opacity-100 scale-100'
+                            leaveTo='opacity-0 scale-95'
+                        >
+                            <DialogPanel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                                <DialogTitle
+                                    as='h3'
+                                    className='text-lg font-medium text-center leading-6 text-gray-900'
+                                >
+                                    Attachment file upload & Info
+                                </DialogTitle>
+                                <div className='mt-2 w-full'>
+                                    <AttachmentForm />
+                                </div>
+                                <hr className='mt-8 ' />
+                                <div className='mt-2 '>
+                                    <button
+                                        type='button'
+                                        className='inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2'
+                                        onClick={() => closeModal(false)}
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </DialogPanel>
+                        </TransitionChild>
                     </div>
-                    <div>
-                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Status</label>
-                        <input type="text" name="status" placeholder="Pending" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+                </div>
+            </Dialog>
+        </Transition>
+    )
+}
 
-                    <input type="submit" value="Submitted Assignment" className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+AttachmentModal.propTypes = {
+    user: PropTypes.object,
+    modalHandler: PropTypes.func,
+    setIsOpen: PropTypes.func,
+    closeModal: PropTypes.func,
+    isOpen: PropTypes.bool,
+    isOpenA: PropTypes.bool,
+}
 
-                    <div onClick={handleTakeAssignment} className="cursor-pointer absolute top-0 right-0 text-3xl pr-2">
-                        <RxCross2 />
-                    </div>
-                </form>
-            </div>
-        );
-    };
-
-    export default AttachmentModal;
+export default AttachmentModal
