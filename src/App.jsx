@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './Component/Navbar/Navbar'
 import Card from './Component/Card'
+import Footer from './Component/Footer/Footer'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -11,10 +12,11 @@ function App() {
         <div className='mb-16'>
           <Navbar></Navbar>
         </div>
-        <div className=' bg-white h-[650px] rounded-lg p-5'>
+        <div className=' bg-white shadow-lg h-[650px] rounded-lg p-5'>
           <Card></Card>
         </div>
         <div className=''>
+          <Footer></Footer>
         </div>
       </div>
 
