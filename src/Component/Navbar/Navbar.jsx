@@ -4,7 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Navbar = () => {
     return (
         <div className="">
-            <div className="bg-slate-300 fixed z-10 left-0 right-0 navbar container mx-auto">
+            <div className="bg-slate-300 navbar w-full">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <button className="text-2xl text-white"><FaFacebookF /></button>
                     </div>
                     <button className="text-white text-xl p-4 rounded-l-xl bg-cyan-600"><ImDownload2 /></button>
-                    <a className="p-3 text-lg text-white rounded-r-xl bg-cyan-600">Download LightShot for free</a>
+                    <a className="p-4 text-sm text-white rounded-r-xl bg-cyan-600">Download LightShot for free</a>
                 </div>
             </div>
         </div>
