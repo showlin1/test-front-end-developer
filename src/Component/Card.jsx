@@ -6,7 +6,7 @@ import { TiMessages } from "react-icons/ti";
 const Home = () => {
     return (
         <div className="max-w-7xl mx-auto border-t-2 border-r-2 p-3 ">
-            <div className=" flex flex-col-1 md:flex-col-2 lg:flex-col-6 gap-5 max-w-7xl overflow-x-auto mx-auto">
+            <div className=" flex flex-col-1 md:flex-col-2 lg:flex-col-6 gap-5  overflow-x-auto mx-auto">
                 <div className="flex-shrink-0 h-[550px] bg-gray-100 p-4 overflow-y-auto ">
                     <div className="flex justify-between">
                         <div className="flex">

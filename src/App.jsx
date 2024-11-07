@@ -7,12 +7,14 @@ function App() {
 
   return (
     <>
-      <div className='bg-slate-50'>
+      <div className='bg-slate-100'>
         <div className='mb-16'>
           <Navbar></Navbar>
         </div>
-        <div className=' bg-white rounded-lg p-5'>
+        <div className=' bg-white h-[650px] rounded-lg p-5'>
           <Card></Card>
+        </div>
+        <div className=''>
         </div>
       </div>
 
