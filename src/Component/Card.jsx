@@ -3,7 +3,9 @@ import { MdDateRange } from "react-icons/md";
 import { CgCalendarDates } from "react-icons/cg";
 import { MdAttachment } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
+import { useForm } from "react-hook-form";
 const Home = () => {
+    const { register, handleSubmit, reset } = useForm();
     return (
         <div className="max-w-7xl mx-auto border-t-2 border-r-2 p-3 ">
             <div className=" flex flex-col-1 md:flex-col-2 lg:flex-col-6 gap-5  overflow-x-auto mx-auto">
@@ -46,7 +48,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -86,7 +113,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -126,7 +178,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -166,7 +243,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -206,7 +308,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -246,7 +373,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -295,7 +447,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -335,7 +512,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -375,7 +577,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -415,7 +642,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -455,7 +707,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -495,7 +772,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -544,7 +846,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -584,7 +911,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -624,7 +976,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -664,7 +1041,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -704,7 +1106,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -744,7 +1171,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -790,7 +1242,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -830,7 +1307,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -870,7 +1372,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -910,7 +1437,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -950,7 +1502,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -990,7 +1567,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1036,7 +1638,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1076,7 +1703,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1116,7 +1768,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1156,7 +1833,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1196,7 +1898,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1236,7 +1963,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1282,7 +2034,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1322,7 +2099,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1362,7 +2164,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1402,7 +2229,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1442,7 +2294,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
@@ -1482,7 +2359,32 @@ const Home = () => {
                                 <p className="text-lg">15</p>
                             </div>
                             <div className="flex gap-2 ml-3 p-1 ">
-                                <span className="mt-1 text-xl"><MdAttachment /></span>
+                                <button>
+                                    <span className="mt-1 text-xl">
+                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                                        <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><MdAttachment /></button>
+                                        <dialog id="my_modal_1" className="modal">
+                                            <div className="modal-box">
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+                                                <div className="form-control w-full my-6">
+                                                    <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                                                </div>
+
+                                                <div className="modal-action">
+                                                    <form method="dialog ">
+                                                        {/* if there is a button in form, it will close the modal */}
+                                                        <div className="flex gap-10">
+                                                            <button className="btn">Submit</button>
+                                                            <button className="btn">Close</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </span>
+                                </button>
                                 <p className="text-lg">25</p>
                             </div>
                             <div className="flex gap-1 ml-3 p-1 ">
